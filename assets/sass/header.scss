@@ -1,0 +1,62 @@
+/* Header */
+header#header {
+	background-color: $background-top;
+	overflow: hidden;
+	.about {
+		background-color: #4CABB1;
+		color: $no-white;
+		min-height: 300px;
+		padding: 15px;
+		position: relative;
+		text-align: center;
+		.in {
+			position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			  width: 70%;
+			h2 {
+				margin-top: 0;
+			}
+			.button {
+			    box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.1);
+			    background-color: lighten( #5ab7bd, 5% );
+			    color: $no-white;
+			    &:hover {
+			    	background-color: darken( #5ab7bd, 5% );
+			    }
+			}
+		}
+	}
+	.online-service {
+		background-color: #69C7AD;
+		color: $no-white;
+		min-height: 300px;
+		padding: 15px;
+		position: relative;
+		text-align: center;
+		.in {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 70%;
+			h2 {
+				margin-top: 0;
+			}
+			.button {
+			    box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.1);
+			    background-color: lighten( #69C7AD, 5% );
+			    color: $no-white;
+			    &:hover {
+			    	background-color: darken( #69C7AD, 10% );
+			    }
+			}
+		}
+	}
+	.slider {
+		background-color: #ccc; /* Temp */
+		min-height: 600px;
+		overflow: hidden;
+	}
+}

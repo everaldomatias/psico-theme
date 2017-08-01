@@ -31,32 +31,62 @@
 		<div class="container">
 			<div class="page-header hidden-xs">
 
-				<?php odin_the_custom_logo(); ?>
+				<div class="top">
+					<?php odin_the_custom_logo(); ?>
+					<button>Menu</button>
+				</div><!-- top -->
 
 				<?php if ( is_home() ) : ?>
-					<h1 class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-					</h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				<?php else : ?>
-					<div class="site-title h1">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-					</div>
-					<div class="site-description h2">
-						<?php bloginfo( 'description' ); ?>
-					</div>
-				<?php endif ?>
+					<div class="col-sm-4 nopadding side">
+						<div class="col-sm-12 nopadding about">
+							<div class="in">
 
-				<?php if ( get_header_image() ) : ?>
-					<div class="custom-header">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-						</a>
-					</div>
+								<?php
+									$about = em_transient( 'about_transient', get_page_by_path( 'sobre', OBJECT ) );
+									if ( ! empty( $about ) ) : ?>
+									
+									<h2><?php echo apply_filters( 'the_title', $about->post_title ); ?></h2>
+									<?php echo apply_filters( 'the_content', em_get_excerpt( $about->post_content, '200' ) ); ?>
+									<a href="<?php echo esc_url( get_permalink( $about->ID ) ); ?>" class="button">More</a>
+
+								<?php else: ?>
+
+									<h2>Sobre</h2>
+									<span>A página "Sobre" não existe ainda!</span>
+										
+								<?php
+									// endif ( $about )
+									endif; ?>
+
+							</div><!-- in -->
+						</div><!-- about -->
+						<div class="col-sm-12 nopadding online-service">
+							<div class="in">
+
+								<?php
+									$online_service = em_transient( 'online_service_transient', get_page_by_path( 'atendimento-online', OBJECT ) );
+									if ( ! empty( $online_service ) ) : ?>
+									
+									<h2><?php echo apply_filters( 'the_title', $online_service->post_title ); ?></h2>
+									<?php echo apply_filters( 'the_content', em_get_excerpt( $online_service->post_content, '200' ) ); ?>
+									<a href="" class="button">More</a>
+
+								<?php else: ?>
+
+									<h2>Atendimento Online</h2>
+									<span>A página "Atendimento Online" não existe ainda!</span>
+										
+								<?php
+									// endif ( $online_service )
+									endif; ?>
+
+							</div><!-- in -->
+						</div><!-- online-service -->
+					</div><!-- side -->
+					<div class="col-sm-8 slider">
+						Slider
+					</div><!-- slider -->
+					<div class="clear"></div>
 				<?php endif; ?>
 
 			</div><!-- .page-header-->
@@ -102,4 +132,4 @@
 	</header><!-- #header -->
 
 	<div id="wrapper" class="container">
-		<div class="row">
+		<div class="inner">

@@ -10,7 +10,7 @@
  */
 ?>
 
-		</div><!-- .row -->
+		</div><!-- .inner -->
 	</div><!-- #wrapper -->
 
 	<footer id="footer" role="contentinfo">

@@ -44,6 +44,11 @@ require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.p
  */
 require_once get_template_directory() . '/core/classes/widgets/class-widget-like-box.php';
 
+/**
+ * Functions da Galáxia.
+ */
+require_once get_template_directory() . '/inc/functions-da-galaxia.php';
+
 if ( ! function_exists( 'odin_setup_features' ) ) {
 
 	/**
