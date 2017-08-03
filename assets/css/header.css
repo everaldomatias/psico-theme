@@ -6,10 +6,10 @@ Error: Undefined variable: "$background-top".
 2: header#header {
 3: 	background-color: $background-top;
 4: 	overflow: hidden;
-5: 	.about {
-6: 		background-color: #4CABB1;
-7: 		color: $no-white;
-8: 		min-height: 300px;
+5: 	.navbar-header {
+6: 		left: 10px;
+7: 		right: 10px;
+8: 		position: fixed;
 
 Backtrace:
 ../assets/sass/header.scss:3
@@ -58,4 +58,4 @@ C:/Ruby22-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$background-top\".\A         on line 3 of ../assets/sass/header.scss\A \A 1: /* Header */\A 2: header#header {\A 3: 	background-color: $background-top;\A 4: 	overflow: hidden;\A 5: 	.about {\A 6: 		background-color: #4CABB1;\A 7: 		color: $no-white;\A 8: 		min-height: 300px;"; }
+  content: "Error: Undefined variable: \"$background-top\".\A         on line 3 of ../assets/sass/header.scss\A \A 1: /* Header */\A 2: header#header {\A 3: 	background-color: $background-top;\A 4: 	overflow: hidden;\A 5: 	.navbar-header {\A 6: 		left: 10px;\A 7: 		right: 10px;\A 8: 		position: fixed;"; }
