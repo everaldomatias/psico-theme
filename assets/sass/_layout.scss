@@ -84,6 +84,7 @@ body {
 // Wrapper
 // ==========================================================================
 #wrapper {
+    transition: opacity 0.5s ease-in-out;
     .inner {
         background-color: $no-white;
         overflow: hidden;

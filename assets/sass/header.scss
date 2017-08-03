@@ -1,86 +1,82 @@
-/* Header */
-header#header {
-	background-color: $background-top;
+/* Top */
+.top {
+	height: 50px;
 	overflow: hidden;
-	.top {
-		height: 50px;
-		overflow: hidden;
-		position: fixed;
-		top: 32px;
+	position: fixed;
+	top: 32px;
+	width: 100%;
+	z-index: 99;
+	.container-fluid {
+		max-width: 1110px;
 		width: 100%;
-		z-index: 99;
-		.container-fluid {
-			max-width: 1110px;
-			width: 100%;
-			#btn-toggle {
-				background-color: $no-white;
-				cursor: pointer;
-				height: 40px;
+		#btn-toggle {
+			background-color: $no-white;
+			cursor: pointer;
+			height: 40px;
+			position: absolute;
+			right: 0;
+			top: 5px;
+			width: 40px;
+			z-index: 9;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: .5s ease-in-out;
+			-moz-transition: .5s ease-in-out;
+			-o-transition: .5s ease-in-out;
+			transition: .5s ease-in-out;
+			span {
+				background: #333;
+				border-radius: 2px;
+				display: block;
+				height: 2px;
+				left: 25%;
+				opacity: 1;
 				position: absolute;
-				right: 0;
-				top: 5px;
-				width: 40px;
-				z-index: 9;
+				width: 50%;
 				-webkit-transform: rotate(0deg);
 				-moz-transform: rotate(0deg);
 				-o-transform: rotate(0deg);
 				transform: rotate(0deg);
-				-webkit-transition: .5s ease-in-out;
-				-moz-transition: .5s ease-in-out;
-				-o-transition: .5s ease-in-out;
-				transition: .5s ease-in-out;
+				-webkit-transition: .2s ease-in-out;
+				-moz-transition: .2s ease-in-out;
+				-o-transition: .2s ease-in-out;
+				transition: .2s ease-in-out;
+				&:nth-child(1) {
+					top: 13px;
+				}
+				&:nth-child(2),
+				&:nth-child(3) {
+					top: 20px;
+				}
+				&:nth-child(4) {
+					top: 27px;
+				}
+			}
+			&.open {
 				span {
-					background: #333;
-					border-radius: 2px;
-					display: block;
-					height: 2px;
-					left: 25%;
-					opacity: 1;
-					position: absolute;
-					width: 50%;
-					-webkit-transform: rotate(0deg);
-					-moz-transform: rotate(0deg);
-					-o-transform: rotate(0deg);
-					transform: rotate(0deg);
-					-webkit-transition: .2s ease-in-out;
-					-moz-transition: .2s ease-in-out;
-					-o-transition: .2s ease-in-out;
-					transition: .2s ease-in-out;
 					&:nth-child(1) {
 						top: 13px;
+						width: 0%;
+						left: 50%;
 					}
-					&:nth-child(2),
+					&:nth-child(2) {
+						-webkit-transform: rotate(45deg);
+						-moz-transform: rotate(45deg);
+						-o-transform: rotate(45deg);
+						transform: rotate(45deg);
+					}
 					&:nth-child(3) {
-						top: 20px;
+						-webkit-transform: rotate(-45deg);
+						-moz-transform: rotate(-45deg);
+						-o-transform: rotate(-45deg);
+						transform: rotate(-45deg);
 					}
 					&:nth-child(4) {
 						top: 27px;
-					}
-				}
-				&.open {
-					span {
-						&:nth-child(1) {
-							top: 13px;
-							width: 0%;
-							left: 50%;
-						}
-						&:nth-child(2) {
-							-webkit-transform: rotate(45deg);
-							-moz-transform: rotate(45deg);
-							-o-transform: rotate(45deg);
-							transform: rotate(45deg);
-						}
-						&:nth-child(3) {
-							-webkit-transform: rotate(-45deg);
-							-moz-transform: rotate(-45deg);
-							-o-transform: rotate(-45deg);
-							transform: rotate(-45deg);
-						}
-						&:nth-child(4) {
-							top: 27px;
-							width: 0%;
-							left: 50%;
-						}
+						width: 0%;
+						left: 50%;
 					}
 				}
 			}
@@ -91,7 +87,37 @@ header#header {
 		max-width: 800px;
 		overflow: hidden;
 		width: 85%;
+		-webkit-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
+		-moz-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
+		box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
+		nav {
+			ul {
+				padding-left: 0;
+				li {
+					&.active {
+						background-color: #000;
+					}
+					a {
+						color: $no-white;
+						display: block;
+						padding: 15px;
+						&:active,
+						&:hover,
+						&:focus {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
 	}
+}
+
+/* Header */
+header#header {
+	background-color: $background-top;
+	overflow: hidden;
+	transition: opacity 0.5s ease-in-out;
 	.about {
 		background-color: #4CABB1;
 		color: $no-white;
@@ -154,6 +180,18 @@ header#header {
 /* Logged with Admin Bar */
 /* Header */
 body.admin-bar{
-	header#header {
+	#menu-toggle {
+		padding-top: 32px;
+		@media ( max-width: 782px ) {
+			padding-top: 46px;
+		}
+	}
+}
+
+/* Opacity with the menu is opened */
+body.open-menu {
+	#header,
+	#wrapper {
+		opacity: 0.3;
 	}
 }

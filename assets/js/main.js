@@ -21,6 +21,7 @@ jQuery(document).ready(function($) {
 	$(document).ready(function(){
 		$('#btn-toggle').click(function(){
 			$(this).toggleClass('open');
+			$('body').toggleClass('open-menu');
 		});
 	});
 

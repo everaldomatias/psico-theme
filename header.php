@@ -27,40 +27,38 @@
 		</div>
 	</a>
 
+	<div class="top">
+		<div class="container-fluid">
+			<div id="btn-toggle" data-toggle="offcanvas" data-target="#menu-toggle" aria-expanded="false" aria-controls="collapseExample" data-canvas="">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			</div><!-- btn-toggle -->
+		</div><!-- container-fluid -->
+		<div class="navmenu-fixed-left offcanvas" id="menu-toggle">
+			<nav role="navigation">
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'main-menu',
+							'depth'          => 2,
+							'container'      => false,
+							'menu_class'     => '',
+							'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+							'walker'         => new Odin_Bootstrap_Nav_Walker()
+						)
+					);
+				?>
+			</nav>
+		</div><!-- #menu-toggle -->
+	</div><!-- top -->
+
 	<header id="header" role="banner">
-
-		<div class="top">
-			<div class="container-fluid">
-				<div id="btn-toggle" data-toggle="offcanvas" data-target="#menu-toggle" aria-expanded="false" aria-controls="collapseExample" data-canvas="">
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				  <span></span>
-				</div><!-- btn-toggle -->
-			</div><!-- container-fluid -->
-		</div><!-- top -->
-
 		<div class="container-fluid">
 			<div class="page-header">
 
 				<?php odin_the_custom_logo(); ?>
-
-				<div class="navmenu-fixed-left offcanvas" id="menu-toggle">
-					<nav role="navigation">
-						<?php
-							wp_nav_menu(
-								array(
-									'theme_location' => 'main-menu',
-									'depth'          => 2,
-									'container'      => false,
-									'menu_class'     => '',
-									'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-									'walker'         => new Odin_Bootstrap_Nav_Walker()
-								)
-							);
-						?>
-					</nav>
-				</div><!-- #menu-toggle -->
 
 				<?php if ( is_home() ) : ?>
 					<div class="col-sm-4 nopadding side">
