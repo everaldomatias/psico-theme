@@ -2,12 +2,95 @@
 header#header {
 	background-color: $background-top;
 	overflow: hidden;
-	.navbar-header {
-		left: 10px;
-		right: 10px;
+	.top {
+		height: 50px;
+		overflow: hidden;
 		position: fixed;
+		top: 32px;
 		width: 100%;
 		z-index: 99;
+		.container-fluid {
+			max-width: 1110px;
+			width: 100%;
+			#btn-toggle {
+				background-color: $no-white;
+				cursor: pointer;
+				height: 40px;
+				position: absolute;
+				right: 0;
+				top: 5px;
+				width: 40px;
+				z-index: 9;
+				-webkit-transform: rotate(0deg);
+				-moz-transform: rotate(0deg);
+				-o-transform: rotate(0deg);
+				transform: rotate(0deg);
+				-webkit-transition: .5s ease-in-out;
+				-moz-transition: .5s ease-in-out;
+				-o-transition: .5s ease-in-out;
+				transition: .5s ease-in-out;
+				span {
+					background: #333;
+					border-radius: 2px;
+					display: block;
+					height: 2px;
+					left: 25%;
+					opacity: 1;
+					position: absolute;
+					width: 50%;
+					-webkit-transform: rotate(0deg);
+					-moz-transform: rotate(0deg);
+					-o-transform: rotate(0deg);
+					transform: rotate(0deg);
+					-webkit-transition: .2s ease-in-out;
+					-moz-transition: .2s ease-in-out;
+					-o-transition: .2s ease-in-out;
+					transition: .2s ease-in-out;
+					&:nth-child(1) {
+						top: 13px;
+					}
+					&:nth-child(2),
+					&:nth-child(3) {
+						top: 20px;
+					}
+					&:nth-child(4) {
+						top: 27px;
+					}
+				}
+				&.open {
+					span {
+						&:nth-child(1) {
+							top: 13px;
+							width: 0%;
+							left: 50%;
+						}
+						&:nth-child(2) {
+							-webkit-transform: rotate(45deg);
+							-moz-transform: rotate(45deg);
+							-o-transform: rotate(45deg);
+							transform: rotate(45deg);
+						}
+						&:nth-child(3) {
+							-webkit-transform: rotate(-45deg);
+							-moz-transform: rotate(-45deg);
+							-o-transform: rotate(-45deg);
+							transform: rotate(-45deg);
+						}
+						&:nth-child(4) {
+							top: 27px;
+							width: 0%;
+							left: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+	#menu-toggle {
+		background-color: #333;
+		max-width: 800px;
+		overflow: hidden;
+		width: 85%;
 	}
 	.about {
 		background-color: #4CABB1;
@@ -65,5 +148,12 @@ header#header {
 		background-color: #ccc; /* Temp */
 		min-height: 600px;
 		overflow: hidden;
+	}
+}
+
+/* Logged with Admin Bar */
+/* Header */
+body.admin-bar{
+	header#header {
 	}
 }

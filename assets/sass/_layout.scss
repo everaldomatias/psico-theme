@@ -26,6 +26,12 @@
 .clear {
     clear: both;
 }
+.container-fluid {
+    float: none;
+    margin: 0 auto;
+    max-width: 1140px;
+    position: relative;
+}
 .button {
     transition: all 0.2s ease-in-out;
     border-radius: 3.92857em;

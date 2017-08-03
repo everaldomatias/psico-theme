@@ -18,4 +18,10 @@ jQuery(document).ready(function($) {
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();
 
+	$(document).ready(function(){
+		$('#btn-toggle').click(function(){
+			$(this).toggleClass('open');
+		});
+	});
+
 });
