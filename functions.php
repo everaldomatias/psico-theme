@@ -49,6 +49,11 @@ require_once get_template_directory() . '/core/classes/widgets/class-widget-like
  */
 require_once get_template_directory() . '/inc/functions-da-galaxia.php';
 
+/**
+ * Custom Post Types.
+ */
+require_once get_template_directory() . '/inc/custom-post-types.php';
+
 if ( ! function_exists( 'odin_setup_features' ) ) {
 
 	/**
