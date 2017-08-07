@@ -229,6 +229,9 @@ add_action( 'after_switch_theme', 'odin_flush_rewrite' );
 function odin_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
+	// Loads Raleway Font.
+	wp_enqueue_style( 'raleway', 'https://fonts.googleapis.com/css?family=Raleway', array(), null, 'all' );
+
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
