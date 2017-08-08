@@ -55,7 +55,7 @@
 	</div><!-- top -->
 
 	<header id="header" role="banner">
-		<div class="container-fluid">
+		<div class="container-fluid nopadding">
 			<div class="page-header">
 
 				<?php odin_the_custom_logo(); ?>

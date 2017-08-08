@@ -1,0 +1,26 @@
+body.home {
+	.services {
+		overflow: hidden;
+		padding-bottom: 30px;
+		padding-top: 30px;
+		h2 {
+			margin-top: 0;
+		}
+		.entry-title {
+			display: block;
+			text-align: center;
+		}
+		a {
+			color: $grey;
+			text-decoration: none;
+		}
+		.each {
+			border-right: 1px solid $grey;
+			margin-top: 15px;
+			text-align: center;
+			&:last-child {
+				border: none;
+			}
+		}
+	}
+}

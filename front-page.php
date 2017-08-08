@@ -15,7 +15,7 @@
 
 get_header(); ?>
 
-	<main id="content" class="<?php echo odin_classes_page_sidebar(); ?>" tabindex="-1" role="main">
+	<main id="content" class="<?php echo odin_classes_page_full(); ?>" tabindex="-1" role="main">
 
 		<?php
 		$args = array(
@@ -28,12 +28,12 @@ get_header(); ?>
 
 			<section class="services">
 
-				<h2>Praesent consequat at nunc non vehicul</h2>
-				<h3>Lipsum consequat at nunc</h3>
+				<h2 class="entry-title">Praesent consequat at nunc non vehicul</h2>
+				<h4 class="entry-title">Lipsum consequat at nunc</h4>
 
 				<?php while ( $services->have_posts() ) : $services->the_post(); ?>
 
-					<div class="each">
+					<div class="each col-sm-4">
 						<a href="<?php the_permalink(); ?>">
 							<div class="thumb">
 								<?php if ( has_post_thumbnail() ): ?>
@@ -58,5 +58,4 @@ get_header(); ?>
 	</main><!-- #content -->
 
 <?php
-get_sidebar();
 get_footer();
