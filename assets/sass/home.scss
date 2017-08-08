@@ -18,6 +18,9 @@ body.home {
 			border-right: 1px solid $grey;
 			margin-top: 15px;
 			text-align: center;
+			span {
+				max-width: 90%;
+			}
 			&:last-child {
 				border: none;
 			}
