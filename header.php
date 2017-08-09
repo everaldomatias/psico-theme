@@ -118,5 +118,5 @@
 		</div><!-- .container-->
 	</header><!-- #header -->
 
-	<div id="wrapper" class="container">
+	<div id="wrapper" class="container-fluid nopadding">
 		<div class="inner">

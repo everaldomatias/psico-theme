@@ -1,8 +1,8 @@
 body.home {
 	.services {
 		overflow: hidden;
-		padding-bottom: 30px;
-		padding-top: 30px;
+		padding-bottom: 80px;
+		padding-top: 80px;
 		h2 {
 			margin-top: 0;
 		}
@@ -15,7 +15,7 @@ body.home {
 			text-decoration: none;
 		}
 		.each {
-			border-right: 1px solid $grey;
+			border-right: 1px solid $background-bottom;
 			margin-top: 15px;
 			text-align: center;
 			span {
@@ -23,6 +23,15 @@ body.home {
 			}
 			&:last-child {
 				border: none;
+			}
+			@media all and ( max-width: 768px ) {
+				border-bottom: 1px solid $background-bottom;
+				border-right: none;
+				padding-bottom: 50px;
+				padding-top: 40px;
+				&:last-child {
+					border: none;
+				}
 			}
 		}
 	}
