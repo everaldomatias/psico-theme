@@ -1,0 +1,37 @@
+/* Footer */
+footer#footer {
+	background-color: $background-top;
+	color: $no-white;
+	height: auto;
+	padding-top: 0;
+	position: relative;
+	.container-fluid {
+		.infos {
+			background-color: $footer;
+			overflow: hidden;
+			padding-bottom: 50px;
+			padding-top: 50px;
+			h2 {
+				margin-top: 0;
+			}
+			.wpcf7 {
+				input,
+				textarea {
+					border: 0;
+					border-radius: 20px;
+					display: block;
+					padding: 5px 15px;
+					text-align: center;
+					width: 100%;
+					&:focus {
+						outline: 0;
+					}
+					&[type="submit"] {
+						margin: 0 auto;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+}

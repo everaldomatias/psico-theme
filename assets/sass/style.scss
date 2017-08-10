@@ -11,13 +11,14 @@ Author URI: http://wpod.in/#colaboradores
 */
 
 @import
-        "variables",           // Theme       Custom Variables
-        "bootstrap/bootstrap", // Bootstrap   Styles Core
-        "wordpress/wordpress", // WordPress   Styles Core
-        //"woocommerce",       // WooCommerce Styles Core
-        "odin/core",           // Odin        Styles Core
-        "jasny-bootstrap",	   // Jasny       Lib
-        "layout",              // Theme       Custom Layout
-        "header",              // Theme       Header
-        "home"				   // Home 	  	  Custom Home
+        "variables",          	// Theme       	Custom Variables
+        "bootstrap/bootstrap",	// Bootstrap   	Styles Core
+        "wordpress/wordpress",	// WordPress   	Styles Core
+        //"woocommerce",      	// WooCommerce 	Styles Core
+        "odin/core",          	// Odin        	Styles Core
+        "jasny-bootstrap",	  	// Jasny       	Lib
+        "layout",             	// Theme       	Custom Layout
+        "header",             	// Theme    	Header
+        "footer",				// Theme		Footer
+        "home"				  	// Home 	  	Custom Home
 ;
