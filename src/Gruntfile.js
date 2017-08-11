@@ -159,13 +159,13 @@ module.exports = function( grunt ) {
 		'ftp-deploy': {
 			build: {
 				auth: {
-					host: 'ftp.SEU-SITE.com',
+					host: 'dev-eve14-com-br.umbler.net',
 					port: 21,
-					authPath: '../.ftppass',
+					authPath: '../src/.ftppass',
 					authKey: 'key_for_deploy'
 				},
 				src: '../',
-				dest: '/PATH/wp-content/themes/odin',
+				dest: '/public/wp-content/themes/psico-theme',
 				exclusions: [
 					'../**.DS_Store',
 					'../**Thumbs.db',
@@ -175,7 +175,7 @@ module.exports = function( grunt ) {
 					'../assets/js/**bootstrap',
 					'../assets/js/**libs',
 					'../assets/js/plugins.js',
-					'../assets/js/main.js',
+					//'../assets/js/main.js',
 					'../*.zip',
 					'../*.sublime-project',
 					'../*.sublime-workspace',
