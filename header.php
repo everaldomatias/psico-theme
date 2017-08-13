@@ -107,9 +107,14 @@
 							</div><!-- in -->
 						</div><!-- online-service -->
 					</div><!-- side -->
-					<div class="col-sm-8 slider">
-						Slider
-					</div><!-- slider -->
+					<div class="col-sm-8 principal-slider">
+						<div class="each">
+							<img src="http://via.placeholder.com/760" alt="">
+						</div>
+						<div class="each">
+							<img src="http://via.placeholder.com/760" alt="">
+						</div>
+					</div><!-- principal-slider -->
 					<div class="clear"></div>
 				<?php endif; ?>
 

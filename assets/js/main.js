@@ -25,4 +25,15 @@ jQuery(document).ready(function($) {
 		});
 	});
 
+	$(document).ready(function(){
+	  	$('.principal-slider').slick({
+	  		arrows: false,
+	    	dots: false,
+			infinite: true,
+			speed: 500,
+			fade: true,
+			cssEase: 'linear'
+	  	});
+	});
+
 });
