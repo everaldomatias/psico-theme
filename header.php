@@ -60,6 +60,8 @@
 
 				<?php odin_the_custom_logo(); ?>
 
+				<div class="clear"></div>
+
 				<?php if ( is_home() ) : ?>
 					<div class="col-sm-4 nopadding side">
 						<div class="col-sm-12 nopadding about">
