@@ -76,6 +76,16 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 				'main-menu' => __( 'Main Menu', 'odin' )
 			)
 		);
+		register_nav_menus(
+			array(
+				'first-footer-menu' => __( 'First Footer Menu', 'em' )
+			)
+		);
+		register_nav_menus(
+			array(
+				'second-footer-menu' => __( 'Second Footer Menu', 'em' )
+			)
+		);
 
 		/*
 		 * Add post_thumbnails suport.

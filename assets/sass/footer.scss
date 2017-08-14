@@ -33,5 +33,54 @@ footer#footer {
 				}
 			}
 		}
+		.menus {
+			padding-bottom: 40px;
+			padding-top: 40px;
+			ul {
+				border-right: 1px solid #ccc;
+				padding-left: 0;
+				padding-bottom: 20px;
+				padding-top: 20px;
+				@media all and ( max-width: 768px ) {
+					border-right: 0;
+				}
+				li {
+					list-style: none;
+					&.title {
+						text-transform: uppercase;
+					}
+					a {
+						color: $no-white;
+						display: block;
+						padding: 5px;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		.contacts {
+			padding-bottom: 60px;
+			padding-top: 60px;
+			text-align: left;
+			@media all and ( max-width: 768px ) {
+				padding-top: 0;
+				text-align: center;
+			}
+			span {
+				display: block;
+				padding-bottom: 5px;
+			}
+		}
+		p.credits {
+			padding: 30px 15px; 
+			a {
+				color: $no-white;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
