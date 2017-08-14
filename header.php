@@ -107,13 +107,27 @@
 							</div><!-- in -->
 						</div><!-- online-service -->
 					</div><!-- side -->
-					<div class="col-sm-8 principal-slider">
-						<div class="each">
-							<img src="http://via.placeholder.com/760" alt="">
-						</div>
-						<div class="each">
-							<img src="http://via.placeholder.com/760" alt="">
-						</div>
+					<div class="col-sm-8 nopadding principal-slider">
+						<?php
+						$args = array(
+							'post_type'			=> 'slider',
+							'post_status'		=> 'publish',
+							'posts_per_page'	=> 5,
+							'orderby'			=> 'rand'
+						);
+						$slider = new WP_Query( $args );
+						if ( $slider->have_posts() ) : ?>
+
+							<?php while ( $slider->have_posts() ) : $slider->the_post(); ?>
+								<div class="each" <?php em_thumbnail_background( 'full' ); ?>></div><!-- each -->
+							<?php endwhile; ?>
+
+						<?php else: ?>
+
+							<div class="each" style="background-image: url( 'http://via.placeholder.com/760' )" ></div><!-- each -->
+
+						<?php endif; ?>
+
 					</div><!-- principal-slider -->
 					<div class="clear"></div>
 				<?php endif; ?>

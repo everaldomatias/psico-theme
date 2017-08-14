@@ -65,3 +65,20 @@ function em_transient( $transient, $default = "" ) {
 		set_transient( 'em_' . $transient, $default, WEEK_IN_SECONDS );
 	}
 }
+
+/**
+ * Function em_thumbnail_backgroung
+ *
+ * @since  0.0.1
+ *
+ * @param  string $size with thumbnail size for use.
+ *
+ * @return html
+ */
+function em_thumbnail_background( $size = 'thumbnail' ) {
+	global $post;
+	$get_post_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), $size, false, '' );
+	if ( $get_post_thumbnail ) {
+		echo 'style="background-image: url( ' . esc_url( $get_post_thumbnail[0] ) . ' )"';
+	}	
+}

@@ -41,6 +41,48 @@ if ( ! function_exists( 'em_add_cpt' ) ) {
 			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
 		);
 
+		// Registra o CPT Serviços
 		register_post_type( 'servicos', $args );
+
+		$labels = '';
+		$args = '';
+
+		$labels = array(
+			'name'               => _x( 'Sliders', 'post type general name', 'em' ),
+			'singular_name'      => _x( 'Slider', 'post type singular name', 'em' ),
+			'menu_name'          => _x( 'Sliders', 'admin menu', 'em' ),
+			'name_admin_bar'     => _x( 'Slider', 'add new on admin bar', 'em' ),
+			'add_new'            => _x( 'Add New', 'book', 'em' ),
+			'add_new_item'       => __( 'Add New Slider', 'em' ),
+			'new_item'           => __( 'New Slider', 'em' ),
+			'edit_item'          => __( 'Edit Slider', 'em' ),
+			'view_item'          => __( 'View Slider', 'em' ),
+			'all_items'          => __( 'All Sliders', 'em' ),
+			'search_items'       => __( 'Search Sliders', 'em' ),
+			'parent_item_colon'  => __( 'Parent Sliders:', 'em' ),
+			'not_found'          => __( 'No books found.', 'em' ),
+			'not_found_in_trash' => __( 'No books found in Trash.', 'em' )
+		);
+
+		$args = array(
+			'labels'             => $labels,
+	        'description'        => __( 'Description.', 'em' ),
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'slider' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => null,
+			'menu_icon'			 => 'dashicons-slides',
+			'supports'           => array( 'title', 'thumbnail' )
+		);
+
+		// Registra o CPT Sliders
+		register_post_type( 'slider', $args );
+
 	}
 }

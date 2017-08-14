@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();
 
-	$(document).ready(function(){
+	$(document).ready(function(){	
 		$('#btn-toggle').click(function(){
 			$(this).toggleClass('open');
 			$('body').toggleClass('open-menu');
@@ -27,10 +27,11 @@ jQuery(document).ready(function($) {
 
 	$(document).ready(function(){
 	  	$('.principal-slider').slick({
+	  		autoplay: true,
 	  		arrows: false,
 	    	dots: false,
 			infinite: true,
-			speed: 500,
+			speed: 300,
 			fade: true,
 			cssEase: 'linear'
 	  	});
