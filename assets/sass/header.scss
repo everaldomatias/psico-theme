@@ -3,7 +3,7 @@
 	height: 50px;
 	overflow: hidden;
 	position: fixed;
-	top: 60px;
+	top: 45px;
 	width: 100%;
 	z-index: 99;
 	.container-fluid {
@@ -26,6 +26,9 @@
 			-moz-transition: .5s ease-in-out;
 			-o-transition: .5s ease-in-out;
 			transition: .5s ease-in-out;
+			@media all and ( max-width: 1140px ) {
+				right: 15px;
+			}
 			span {
 				background: #333;
 				border-radius: 2px;
@@ -122,6 +125,10 @@ header#header {
 		border-bottom: 0;
 		margin: 0;
 		padding-bottom: 0;
+		.custom-logo {
+			margin-bottom: 15px;
+			margin-top: 15px;
+		}
 		.about {
 			background-color: #4CABB1;
 			color: $no-white;
@@ -202,6 +209,9 @@ body.admin-bar{
 		@media ( max-width: 782px ) {
 			padding-top: 46px;
 		}
+	}
+	.top {
+		top: 60px;
 	}
 }
 
