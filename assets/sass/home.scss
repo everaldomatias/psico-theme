@@ -35,4 +35,15 @@ body.home {
 			}
 		}
 	}
+	.tips-articles {
+		.each {
+			.thumb {
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				height: 260px;
+				overflow: hidden;
+			}
+		}
+	}
 }

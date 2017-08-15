@@ -110,7 +110,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			'uploads'       => true,
 		);
 
-		add_theme_support( 'custom-header', $default );
+		//add_theme_support( 'custom-header', $default );
 
 		/**
 		 * Support Custom Background.
@@ -120,7 +120,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			'default-image' => '',
 		);
 
-		add_theme_support( 'custom-background', $defaults );
+		//add_theme_support( 'custom-background', $defaults );
 
 		/**
 		 * Support Custom Editor Style.
@@ -190,8 +190,8 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 *  @since Odin 2.2.10
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 240,
-			'width'       => 240,
+			'height'      => 500,
+			'width'       => 250,
 			'flex-height' => true,
 		) );
 	}
