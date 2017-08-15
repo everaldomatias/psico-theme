@@ -37,6 +37,11 @@
 			</div><!-- btn-toggle -->
 		</div><!-- container-fluid -->
 		<div class="navmenu-fixed-left offcanvas" id="menu-toggle">
+			<?php
+			  	if ( has_custom_logo() ) {
+			  		odin_the_custom_logo();
+			  	}
+			?>
 			<nav role="navigation">
 				<?php
 					wp_nav_menu(

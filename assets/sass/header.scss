@@ -26,6 +26,9 @@
 			-moz-transition: .5s ease-in-out;
 			-o-transition: .5s ease-in-out;
 			transition: .5s ease-in-out;
+			-webkit-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
+			-moz-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
+			box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
 			@media all and ( max-width: 1140px ) {
 				right: 15px;
 			}
@@ -93,6 +96,11 @@
 		-webkit-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
 		-moz-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
 		box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.35);
+		.custom-logo {
+			margin: 15px;
+			max-height: 90px;
+			width: auto;
+		}
 		nav {
 			ul {
 				padding-left: 0;
