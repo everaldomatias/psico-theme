@@ -1,9 +1,10 @@
 /* Top */
 .top {
-	height: 50px;
+	height: 100px;
 	overflow: hidden;
+	padding-top: 25px;
 	position: fixed;
-	top: 45px;
+	top: 20px;
 	width: 100%;
 	z-index: 99;
 	.container-fluid {
@@ -219,7 +220,7 @@ body.admin-bar{
 		}
 	}
 	.top {
-		top: 60px;
+		top: 50px;
 	}
 }
 
