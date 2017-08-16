@@ -78,7 +78,7 @@
 									
 									<h2><?php echo apply_filters( 'the_title', $about->post_title ); ?></h2>
 									<?php echo apply_filters( 'the_content', em_get_excerpt( $about->post_content, '200' ) ); ?>
-									<a href="<?php echo esc_url( get_permalink( $about->ID ) ); ?>" class="button">More</a>
+									<a href="<?php echo esc_url( get_permalink( $about->ID ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
 
 								<?php else: ?>
 
@@ -100,7 +100,7 @@
 									
 									<h2><?php echo apply_filters( 'the_title', $online_service->post_title ); ?></h2>
 									<?php echo apply_filters( 'the_content', em_get_excerpt( $online_service->post_content, '200' ) ); ?>
-									<a href="" class="button">More</a>
+									<a href="<?php echo esc_url( get_permalink( $online_service->ID ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
 
 								<?php else: ?>
 

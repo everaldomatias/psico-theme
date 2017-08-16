@@ -66,7 +66,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		/**
 		 * Add support for multiple languages.
 		 */
-		load_theme_textdomain( 'odin', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'em', get_template_directory() . '/languages' );
 
 		/**
 		 * Register nav menus.

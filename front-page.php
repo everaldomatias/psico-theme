@@ -69,50 +69,63 @@ get_header(); ?>
 				<h2 class="entry-title"><?php _e( 'Tips and Articles', 'em' ); ?></h2>
 				<h4 class="entry-title">Lipsum consequat at nunc</h4>
 
-				<?php $count = 0; ?>
+				<div class="loop">
 
-				<?php while ( $tips_articles->have_posts() ) : $tips_articles->the_post(); ?>
+					<?php $count = 0; ?>
 
-					<?php $count++; ?>
+					<?php while ( $tips_articles->have_posts() ) : $tips_articles->the_post(); ?>
 
-					<div class="each col-sm-12">
-						<a href="<?php the_permalink(); ?>">
+						<?php $count++; ?>
 
-							<?php if ( $count == 1 ): ?>
+						<div class="each col-sm-12 nopadding">
+							<a href="<?php the_permalink(); ?>">
 
-								<div class="desc col-sm-4">
-									<h3><?php the_title(); ?></h3>
-									<span><?php echo em_get_excerpt( get_the_content(), '300' ); ?></span>
-								</div><!-- desc -->
+								<?php if ( $count == 1 ): ?>
 
-								<?php if ( has_post_thumbnail() ): ?>
-									<div class="thumb col-sm-8" <?php em_thumbnail_background( 'full' ); ?>></div><!-- thumb -->
+									<div class="desc col-sm-4">
+										<h3><?php the_title(); ?></h3>
+										<span><?php echo em_get_excerpt( get_the_content(), '180' ); ?></span>
+										<div class="clear"></div>
+										<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
+									</div><!-- desc -->
+
+									<?php if ( has_post_thumbnail() ): ?>
+										<div class="thumb col-sm-8" <?php em_thumbnail_background( 'full' ); ?>>
+											<a href="<?php the_permalink(); ?>"></a>
+										</div><!-- thumb -->
+									<?php else: ?>
+										<div class="thumb col-sm-8" style="background-image: url( 'http://via.placeholder.com/720x320' )" >
+											<a href="<?php the_permalink(); ?>"></a>
+										</div><!-- thumb -->
+									<?php endif ?>
+
 								<?php else: ?>
-									<div class="thumb col-sm-8" style="background-image: url( 'http://via.placeholder.com/720x320' )" ></div><!-- thumb -->
+
+									<?php if ( has_post_thumbnail() ): ?>
+										<div class="thumb col-sm-4" <?php em_thumbnail_background( 'full' ); ?>>
+											<a href="<?php the_permalink(); ?>"></a>
+										</div><!-- thumb -->
+									<?php else: ?>
+										<div class="thumb col-sm-4" style="background-image: url( 'http://via.placeholder.com/320' )" >
+											<a href="<?php the_permalink(); ?>"></a>
+										</div><!-- thumb -->
+									<?php endif ?>
+
+									<div class="desc col-sm-8">
+										<h3><?php the_title(); ?></h3>
+										<span><?php echo em_get_excerpt( get_the_content(), '420' ); ?></span>
+										<div class="clear"></div>
+										<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
+									</div><!-- desc -->
+
 								<?php endif ?>
 
-							<?php else: ?>
+							</a>
+						</div><!-- each -->
 
-								<?php if ( has_post_thumbnail() ): ?>
-									<div class="thumb col-sm-4" <?php em_thumbnail_background( 'full' ); ?>></div><!-- thumb -->
-								<?php else: ?>
-									<div class="thumb col-sm-4" style="background-image: url( 'http://via.placeholder.com/320' )" ></div><!-- thumb -->
-								<?php endif ?>
+					<?php endwhile; ?>
 
-								<div class="desc col-sm-8">
-									<h3><?php the_title(); ?></h3>
-									<span><?php echo em_get_excerpt( get_the_content(), '300' ); ?></span>
-								</div><!-- desc -->
-
-								
-							<?php endif ?>
-
-							
-
-						</a>
-					</div><!-- each -->
-
-				<?php endwhile; ?>
+				</div><!-- loop -->
 
 			</section><!-- tips-articles -->
 
