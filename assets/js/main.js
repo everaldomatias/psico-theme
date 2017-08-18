@@ -37,4 +37,15 @@ jQuery(document).ready(function($) {
 	  	});
 	});
 
+	$(document).ready(function(){
+	  	$('.sticky-posts .loop').slick({
+	  		autoplay: true,
+	  		arrows: true,
+			infinite: true,
+			speed: 300,
+			fade: true,
+			cssEase: 'linear'
+	  	});
+	});
+
 });

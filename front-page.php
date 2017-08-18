@@ -55,6 +55,52 @@ get_header(); ?>
 
 		<?php endif; ?>
 
+		<?php $sticky = get_option( 'sticky_posts' );
+		if ( $sticky ) :
+
+			$args = array(
+				'post_type' => 'post',
+				'post_status' => 'publish',
+				'posts_per_page' => 5,
+				'post__in'  => $sticky
+			);
+			$sticky_posts = new WP_Query( $args );
+			if ( $sticky_posts->have_posts() ) : ?>
+
+				<section class="sticky-posts row">
+
+					<div class="loop">
+						<?php while ( $sticky_posts->have_posts() ) : $sticky_posts->the_post(); ?>
+
+							<div class="each col-sm-12 nopadding">
+
+								<?php if ( has_post_thumbnail() ): ?>
+									<div class="thumb col-sm-12 nopadding" <?php em_thumbnail_background( 'full' ); ?>>
+										<a href="<?php the_permalink(); ?>"></a>
+									</div><!-- thumb -->
+								<?php else: ?>
+									<div class="thumb col-sm-12 nopadding" style="background-image: url( 'http://via.placeholder.com/720x320' )" >
+										<a href="<?php the_permalink(); ?>"></a>
+									</div><!-- thumb -->
+								<?php endif ?>
+
+								<div class="desc col-sm-12 nopadding">
+									<h3><?php the_title(); ?></h3>
+									<span><?php echo em_get_excerpt( get_the_content(), '300' ); ?></span>
+									<div class="clear"></div>
+									<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
+								</div><!-- desc -->
+
+							</div><!-- each -->
+
+						<?php endwhile; ?>
+					</div><!-- loop -->
+
+				</section><!-- sticky-posts -->
+
+			<?php endif; ?>
+		<?php endif; ?>
+
 		<?php
 		$args = array(
 			'post_type' => 'post',
