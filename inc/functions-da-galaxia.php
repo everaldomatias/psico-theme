@@ -67,7 +67,7 @@ function em_transient( $transient, $default = "" ) {
 }
 
 /**
- * Function em_thumbnail_backgroung
+ * Function em_thumbnail_background
  *
  * @since  0.0.1
  *

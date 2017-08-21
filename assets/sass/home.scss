@@ -42,6 +42,7 @@ body.home {
 	.sticky-posts {
 		background-color: #FED586;
 		padding: 40px;
+		position: relative;
 		.loop {
 			-webkit-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.20);
 			-moz-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.20);
@@ -49,6 +50,24 @@ body.home {
 			margin: 0 auto;
 			max-width: 720px;
 			overflow: hidden;
+			position: initial;
+			button.slick-arrow {
+				border: 0;
+				height: 200px;
+				position: absolute;
+				text-indent: -9999px;
+				top: 160px;
+				z-index: 9;
+				width: 100px;
+				&.slick-prev {
+					background: url( '../images/prev.png' ) center center no-repeat transparent;
+					left: 30px;
+				}
+				&.slick-next {
+					background: url( '../images/next.png' ) center center no-repeat transparent;
+					right: 30px;
+				}
+			}
 			.each {
 				text-align: center;
 				.thumb {

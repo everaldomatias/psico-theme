@@ -54,6 +54,11 @@ require_once get_template_directory() . '/inc/functions-da-galaxia.php';
  */
 require_once get_template_directory() . '/inc/custom-post-types.php';
 
+/**
+ * Hooks.
+ */
+require_once get_template_directory() . '/inc/hooks.php';
+
 if ( ! function_exists( 'odin_setup_features' ) ) {
 
 	/**
