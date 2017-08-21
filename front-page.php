@@ -57,7 +57,7 @@ get_header(); ?>
 
 		<?php
 	  	$transient_sticky_posts = get_transient( 'transient_sticky_posts' );
-	  	if ( $transient_sticky_posts === false ) {
+	  	if ( $transient_sticky_posts === false || empty( $transient_sticky_posts ) ) {
 	  		$sticky = get_option( 'sticky_posts' );
 	  		if ( $sticky ) :
 				$args = array(
@@ -71,7 +71,7 @@ get_header(); ?>
 			$transient_sticky_posts = set_transient( 'transient_sticky_posts', $sticky_posts, 7 * DAY_IN_SECONDS );
 		}
 
-		if ( $transient_sticky_posts->have_posts() ) : ?>
+		if ( ! empty( $transient_sticky_posts ) && $transient_sticky_posts->have_posts() ) : ?>
 
 			<section class="sticky-posts row">
 
