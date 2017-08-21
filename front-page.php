@@ -56,7 +56,7 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<?php
-	  	$transient_sticky_posts = get_transients( 'transient-sticky-posts' );
+	  	$transient_sticky_posts = get_transient( 'transient_sticky_posts' );
 	  	if ( $transient_sticky_posts === false ) {
 	  		$sticky = get_option( 'sticky_posts' );
 	  		if ( $sticky ) :
@@ -68,7 +68,7 @@ get_header(); ?>
 				);
 				$sticky_posts = new WP_Query( $args );
 			endif;
-			$transient_sticky_posts = set_transient( 'transient-sticky-posts', $sticky_posts, 7 * DAY_IN_SECONDS );
+			$transient_sticky_posts = set_transient( 'transient_sticky_posts', $sticky_posts, 7 * DAY_IN_SECONDS );
 		}
 
 		if ( $transient_sticky_posts->have_posts() ) : ?>
@@ -110,7 +110,8 @@ get_header(); ?>
 		$args = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',
-			'posts_per_page' => 2
+			'posts_per_page' => 2,
+			'post__not_in' => get_option( 'sticky_posts' )
 		);
 		$tips_articles = new WP_Query( $args );
 		if ( $tips_articles->have_posts() ) : ?>
