@@ -44,6 +44,7 @@ jQuery(document).ready(function($) {
 			infinite: true,
 			speed: 300,
 			fade: true,
+			adaptiveHeight: true,
 			cssEase: 'linear'
 	  	});
 	});
