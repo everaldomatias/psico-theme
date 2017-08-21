@@ -51,6 +51,12 @@ body.home {
 			max-width: 720px;
 			overflow: hidden;
 			position: initial;
+			span {
+				display: inline-block;
+				overflow: hidden;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 			button {
 				&.slick-arrow {
 					border: 0;

@@ -21,6 +21,8 @@
 // ==========================================================================
 body {
     font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     margin-bottom: 0 !important;
 }
 .nopadding {
@@ -38,6 +40,15 @@ body {
     @media all and ( max-width: 1140px ) {
         padding-left: 15px !important;
         padding-right: 15px !important;
+    }
+}
+a {
+    color: $footer;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        color: darken( $footer, 10% );
+        text-decoration: none;
     }
 }
 .button {
@@ -122,7 +133,9 @@ body {
 // ==========================================================================
 // Sidebar
 // ==========================================================================
-#sidebar {}
+#sidebar {
+    padding-top: 30px;
+}
 
 // ==========================================================================
 // Components
