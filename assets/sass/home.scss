@@ -202,6 +202,9 @@ body.home {
 						position: absolute;
 						right: 0;
 					}
+					@media all and ( max-width: 768px ) {
+						display: none;
+					}
 				}
 				.desc {
 					padding: 15px 30px;

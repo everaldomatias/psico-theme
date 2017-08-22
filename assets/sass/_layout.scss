@@ -145,7 +145,10 @@ body {
     overflow: hidden;
     position: relative;
     @media all and ( max-width: 768px ) {
-        height: 350px;
+        height: 320px;
+    }
+    @media all and ( max-width: 520px ) {
+        height: 270px;
     }
 }
 
