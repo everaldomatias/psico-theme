@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odin v2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-15 21:34-0300\n"
-"PO-Revision-Date: 2017-08-15 21:36-0300\n"
+"POT-Creation-Date: 2017-08-21 21:13-0300\n"
+"PO-Revision-Date: 2017-08-21 21:14-0300\n"
 "Last-Translator: Rafael Funchal <rafaelfunchal@gmail.com>\n"
 "Language-Team: WordPress Brasil Group\n"
 "Language: pt_BR\n"
@@ -470,6 +470,14 @@ msgstr "Erro 404"
 msgid "Page %s"
 msgstr "Página %s"
 
+#: footer.php:19
+msgid "Contact Us"
+msgstr "Entre em Contato"
+
+#: footer.php:20
+msgid "We are here to hear you"
+msgstr "Estamos aqui para lhe ouvir"
+
 # @ odin
 #: footer.php:67
 msgid "All rights reserved"
@@ -481,35 +489,50 @@ msgid ""
 "Development by <a href=\"%s\" rel=\"nofollow\" target=\"_blank\">Everaldo "
 "Matias</a>."
 msgstr ""
+"Desenvolvido por <a href=\"%s\" rel=\"follow\" target=\"_blank\">Everaldo "
+"Matias</a>."
 
-#: front-page.php:69
-msgid "Tips and Articles"
-msgstr ""
+#: front-page.php:31
+msgid "Our Main Service"
+msgstr "Nossos Principais Atendimentos"
 
-#: front-page.php:89 front-page.php:118 header.php:81 header.php:103
+#: front-page.php:32
+msgid "And much more to receive you"
+msgstr "E muito mais para lhe recepcionar"
+
+#: front-page.php:97 front-page.php:141 front-page.php:170 header.php:81
+#: header.php:103
 msgid "More"
 msgstr "Mais"
 
+#: front-page.php:121
+msgid "Tips and Articles"
+msgstr "Dicas e Textos"
+
+#: front-page.php:122
+msgid "A little about day-to-day psychology"
+msgstr "Um pouco sobre psicologia no dia a dia"
+
 # @ odin
-#: functions.php:76
+#: functions.php:81
 msgid "Main Menu"
 msgstr "Menu Principal"
 
-#: functions.php:81
+#: functions.php:86
 msgid "First Footer Menu"
 msgstr ""
 
-#: functions.php:86
+#: functions.php:91
 msgid "Second Footer Menu"
 msgstr ""
 
 # @ odin
-#: functions.php:210
+#: functions.php:215
 msgid "Main Sidebar"
 msgstr "Sidebar Principal"
 
 # @ odin
-#: functions.php:212
+#: functions.php:217
 msgid "Site Main Sidebar"
 msgstr "Sidebar principal do site"
 
@@ -601,15 +624,15 @@ msgstr ""
 
 #: inc/custom-post-types.php:16
 msgid "Add New Service"
-msgstr ""
+msgstr "Adicionar Novo Serviço"
 
 #: inc/custom-post-types.php:17
 msgid "New Service"
-msgstr ""
+msgstr "Novo Serviço"
 
 #: inc/custom-post-types.php:18
 msgid "Edit Service"
-msgstr ""
+msgstr "Editar Serviço"
 
 #: inc/custom-post-types.php:19
 msgid "View Service"
@@ -625,7 +648,7 @@ msgstr ""
 
 #: inc/custom-post-types.php:22
 msgid "Parent Services:"
-msgstr ""
+msgstr "Serviços Pai:"
 
 #: inc/custom-post-types.php:23 inc/custom-post-types.php:63
 msgid "No books found."
@@ -637,7 +660,7 @@ msgstr ""
 
 #: inc/custom-post-types.php:29 inc/custom-post-types.php:69
 msgid "Description."
-msgstr ""
+msgstr "Descrição."
 
 #: inc/custom-post-types.php:51
 msgctxt "post type general name"
@@ -665,11 +688,11 @@ msgstr "Adicionar Novo Slider"
 
 #: inc/custom-post-types.php:57
 msgid "New Slider"
-msgstr ""
+msgstr "Novo Slider"
 
 #: inc/custom-post-types.php:58
 msgid "Edit Slider"
-msgstr ""
+msgstr "Editar Slider"
 
 #: inc/custom-post-types.php:59
 msgid "View Slider"
@@ -685,7 +708,7 @@ msgstr ""
 
 #: inc/custom-post-types.php:62
 msgid "Parent Sliders:"
-msgstr ""
+msgstr "Slider Pai:"
 
 #: inc/odin-shortcodes-editor-i18n.php:9
 msgid "Odin shortcodes"

@@ -28,8 +28,8 @@ get_header(); ?>
 
 			<section class="services">
 
-				<h2 class="entry-title">Praesent consequat at nunc non vehicul</h2>
-				<h4 class="entry-title">Lipsum consequat at nunc</h4>
+				<h2 class="entry-title"><?php _e( 'Our Main Service', 'em' ); ?></h2>
+				<h4 class="entry-title"><?php _e( 'And much more to receive you', 'em' ); ?></h4>
 
 				<?php while ( $services->have_posts() ) : $services->the_post(); ?>
 
@@ -119,7 +119,7 @@ get_header(); ?>
 			<section class="tips-articles">
 
 				<h2 class="entry-title"><?php _e( 'Tips and Articles', 'em' ); ?></h2>
-				<h4 class="entry-title">Lipsum consequat at nunc</h4>
+				<h4 class="entry-title"><?php _e( 'A little about day-to-day psychology', 'em' ); ?></h4>
 
 				<div class="loop">
 

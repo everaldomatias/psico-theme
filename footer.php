@@ -16,8 +16,8 @@
 	<footer id="footer" role="contentinfo">
 		<div class="container-fluid nopadding">
 			<div class="infos col-sm-12">
-				<h2 class="entry-title">Contact Us</h2>
-				<h4 class="entry-title">Lipsum consequat at nunc</h4>
+				<h2 class="entry-title"><?php _e( 'Contact Us', 'em' );	?></h2>
+				<h4 class="entry-title"><?php _e( 'We are here to hear you', 'em' );	?></h4>
 				<?php
 				  	// Verifica se o plugin Contact Form 7 está ativo
 					if( defined( 'WPCF7_PLUGIN' ) ){
@@ -64,7 +64,7 @@
 
 				</div><!-- contacts -->
 			</div><!-- col-sm-12 -->
-			<p class="credits">&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'odin' ); ?> | <?php echo sprintf( __( 'Development by <a href="%s" rel="nofollow" target="_blank">Everaldo Matias</a>.', 'odin' ), 'http://everaldomatias.github.io/' ); ?></p><!-- credits -->
+			<p class="credits">&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'em' ); ?> | <?php echo sprintf( __( 'Development by <a href="%s" rel="nofollow" target="_blank">Everaldo Matias</a>.', 'em' ), 'http://everaldomatias.github.io/' ); ?></p><!-- credits -->
 		</div><!-- .container-fluid -->
 	</footer><!-- #footer -->
 

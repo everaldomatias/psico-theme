@@ -145,4 +145,7 @@
 	</header><!-- #header -->
 
 	<div id="wrapper" class="container-fluid nopadding">
+		<?php if ( ! is_home() && has_post_thumbnail() && is_single() || is_page() ) : ?>
+			<div class="the-post-thumbnail" <?php em_thumbnail_background( 'full' ); ?>></div><!-- the-post-thumbnail -->
+		<?php endif; ?>
 		<div class="inner">
