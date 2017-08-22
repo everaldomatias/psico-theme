@@ -85,7 +85,7 @@ get_header(); ?>
 									<a href="<?php the_permalink(); ?>"></a>
 								</div><!-- thumb -->
 							<?php else: ?>
-								<div class="thumb col-sm-12 nopadding" style="background-image: url( 'http://via.placeholder.com/720x320' )" >
+								<div class="thumb col-sm-12 nopadding" style="background-image: url( 'http://via.placeholder.com/740x360' )" >
 									<a href="<?php the_permalink(); ?>"></a>
 								</div><!-- thumb -->
 							<?php endif ?>
@@ -136,7 +136,7 @@ get_header(); ?>
 
 									<div class="desc col-sm-4">
 										<h3><?php the_title(); ?></h3>
-										<span><?php echo em_get_excerpt( get_the_content(), '180' ); ?></span>
+										<span><?php echo em_get_excerpt( get_the_content(), '130' ); ?></span>
 										<div class="clear"></div>
 										<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
 									</div><!-- desc -->

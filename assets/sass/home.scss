@@ -1,14 +1,30 @@
 body.home {
+	#wrapper {
+		.inner {
+			#content {
+				padding: 50px 0;
+				@media all and ( max-width: 768px ) {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
 	.services {
 		overflow: hidden;
 		padding-bottom: 80px;
-		padding-top: 80px;
+		padding-top: 20px;
+		@media all and ( max-width: 768px ) {
+			padding-bottom: 30px;
+		}
 		h2 {
 			margin-top: 0;
 		}
 		h4 {
 			color: $light-gray;
 			text-transform: uppercase;
+			&.entry-title {
+				font-size: 15px;
+			}
 		}
 		.entry-title {
 			display: block;
@@ -19,7 +35,7 @@ body.home {
 			text-decoration: none;
 		}
 		.each {
-			border-right: 1px solid $background-bottom;
+			border-right: 1px solid #ccc;
 			margin-top: 15px;
 			text-align: center;
 			span {
@@ -29,7 +45,7 @@ body.home {
 				border: none;
 			}
 			@media all and ( max-width: 768px ) {
-				border-bottom: 1px solid $background-bottom;
+				border-bottom: 1px solid #ccc;
 				border-right: none;
 				padding-bottom: 50px;
 				padding-top: 40px;
@@ -43,6 +59,9 @@ body.home {
 		background-color: #FED586;
 		padding: 80px;
 		position: relative;
+		@media all and ( max-width: 520px ) {
+			padding: 0;
+		}
 		.loop {
 			-webkit-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.20);
 			-moz-box-shadow: 2px 0px 40px 0px rgba(0,0,0,0.20);
@@ -66,6 +85,9 @@ body.home {
 					top: 160px;
 					z-index: 9;
 					width: 100px;
+					@media all and ( max-width: 520px ) {
+						top: 40px;
+					}
 					&:active,
 					&:focus,
 					&:active:focus {
@@ -75,10 +97,16 @@ body.home {
 					&.slick-prev {
 						background: url( '../images/prev.png' ) center center no-repeat transparent;
 						left: 30px;
+						@media all and ( max-width: 520px ) {
+							left: 15px;
+						}
 					}
 					&.slick-next {
 						background: url( '../images/next.png' ) center center no-repeat transparent;
 						right: 30px;
+						@media all and ( max-width: 520px ) {
+							right: 15px;
+						}
 					}
 				}
 			}
@@ -91,6 +119,9 @@ body.home {
 					height: 260px;
 					overflow: hidden;
 					position: relative;
+					@media all and ( max-width: 520px ) {
+						height: 230px;
+					}
 					a {
 						display: block;
 						height: 100%;
@@ -128,6 +159,9 @@ body.home {
 		h4 {
 			color: $light-gray;
 			text-transform: uppercase;
+			&.entry-title {
+				font-size: 15px;
+			}
 		}
 		.entry-title {
 			display: block;
@@ -145,6 +179,9 @@ body.home {
 			overflow: hidden;
 			.each {
 				text-align: center;
+				@media all and ( max-width: 1040px ) {
+					position: relative;
+				}
 				.thumb {
 					background-position: center;
 					background-repeat: no-repeat;
@@ -158,6 +195,12 @@ body.home {
 						overflow: hidden;
 						position: absolute;
 						width: 100%;
+					}
+					@media all and ( max-width: 1040px ) {
+						background-size: auto 100%;
+						height: 100%;
+						position: absolute;
+						right: 0;
 					}
 				}
 				.desc {

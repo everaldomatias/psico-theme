@@ -195,8 +195,11 @@ header#header {
 		.principal-slider {
 			height: 760px;
 			overflow: hidden;
-			@media all and ( max-width: 520px ) {
+			@media all and ( max-width: 768px ) {
 				height: 520px;
+			}
+			@media all and ( max-width: 520px ) {
+				display: none;
 			}
 			.each {
 				background-position: center;
