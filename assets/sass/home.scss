@@ -120,8 +120,10 @@ body.home {
 					overflow: hidden;
 					position: relative;
 					@media all and ( max-width: 768px ) {
+						background-size: 125%;
 					}
 					@media all and ( max-width: 520px ) {
+						background-size: 150%;
 						height: 230px;
 					}
 					a {
@@ -227,5 +229,8 @@ body.home {
 				}
 			}
 		}
+	}
+	@media all and( max-width: 520 ) {
+		padding: 60px 15px;
 	}
 }

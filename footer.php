@@ -57,10 +57,10 @@
 				<div class="col-sm-4 contacts">
 					
 					<h4 class="title"><?php echo esc_html( bloginfo( 'name' ) ); ?></h4>
-					<span class="name">Ruth Salgado</span>
-					<span class="cfp">CFP 112.251.251-11</span>
-					<span class="phone">11 94791 0000</span>
-					<span class="email">contato@clickpsi.com</span>
+					<span class="name">Drª Ruth Salgado</span>
+					<span class="cfp">CRP 06/72527</span>
+					<span class="phone">11 94751 2012</span>
+					<span class="email">ruth@clickpsi.com</span>
 
 				</div><!-- contacts -->
 			</div><!-- col-sm-12 -->
