@@ -119,6 +119,8 @@ body.home {
 					height: 260px;
 					overflow: hidden;
 					position: relative;
+					@media all and ( max-width: 768px ) {
+					}
 					@media all and ( max-width: 520px ) {
 						height: 230px;
 					}

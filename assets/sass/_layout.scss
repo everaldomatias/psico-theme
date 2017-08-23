@@ -145,9 +145,11 @@ body {
     overflow: hidden;
     position: relative;
     @media all and ( max-width: 768px ) {
+        background-size: 125%;
         height: 320px;
     }
     @media all and ( max-width: 520px ) {
+    background-size: 150%;
         height: 270px;
     }
 }
