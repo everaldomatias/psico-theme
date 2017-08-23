@@ -36,8 +36,9 @@ get_header(); ?>
 					<div class="each col-sm-4">
 						<a href="<?php the_permalink(); ?>">
 							<div class="thumb">
-								<?php if ( has_post_thumbnail() ): ?>
-									<?php the_post_thumbnail( 'thumbnail' ); ?>
+								<?php if ( $icon = get_post_meta( get_the_ID(), 'icon_services', true ) ): ?>
+									<?php $icon_attributes = wp_get_attachment_image_src( $icon ); ?>
+									<img src="<?php echo esc_url( $icon_attributes[0] ); ?>" alt="<?php the_title(); ?>">
 								<?php else: ?>
 									<img src="<?php echo esc_url( 'http://via.placeholder.com/200' ); ?>" alt="<?php the_title(); ?>">
 								<?php endif ?>

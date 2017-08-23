@@ -86,3 +86,31 @@ if ( ! function_exists( 'em_add_cpt' ) ) {
 
 	}
 }
+
+// Include the Odin_Metabox class.
+
+function em_custom_metaboxes() {
+
+    $em_custom_metaboxes_services = new Odin_Metabox(
+        'meta_services', // Slug/ID of the Metabox (Required)
+        'Ícone destacado', // Metabox name (Required)
+        'servicos', // Slug of Post Type (Optional)
+        'side', // Context (options: normal, advanced, or side) (Optional)
+        'default' // Priority (options: high, core, default or low) (Optional)
+    );
+
+    $em_custom_metaboxes_services->set_fields(
+        array(
+            // Icon field.
+            array(
+                'id'          => 'icon_services', // Required
+                'label'       => __( 'Imagem', 'em' ), // Required
+                'type'        => 'image', // Required
+                // 'default'     => '', // Optional (image attachment id)
+                'description' => __( 'Ícone para exibição na Home', 'em' ), // Optional
+            ),
+        )
+    );
+}
+
+add_action( 'init', 'em_custom_metaboxes', 1 );
