@@ -111,7 +111,7 @@ get_header(); ?>
 		$args = array(
 			'post_type' => 'post',
 			'post_status' => 'publish',
-			'posts_per_page' => 2,
+			'posts_per_page' => 4,
 			'post__not_in' => get_option( 'sticky_posts' )
 		);
 		$tips_articles = new WP_Query( $args );
@@ -133,26 +133,7 @@ get_header(); ?>
 						<div class="each col-sm-12 nopadding">
 							<a href="<?php the_permalink(); ?>">
 
-								<?php if ( $count == 1 ): ?>
-
-									<div class="desc col-sm-4">
-										<h3><?php the_title(); ?></h3>
-										<span><?php echo em_get_excerpt( get_the_content(), '130' ); ?></span>
-										<div class="clear"></div>
-										<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
-									</div><!-- desc -->
-
-									<?php if ( has_post_thumbnail() ): ?>
-										<div class="thumb col-sm-8" <?php em_thumbnail_background( 'full' ); ?>>
-											<a href="<?php the_permalink(); ?>"></a>
-										</div><!-- thumb -->
-									<?php else: ?>
-										<div class="thumb col-sm-8" style="background-image: url( 'http://via.placeholder.com/720x320' )" >
-											<a href="<?php the_permalink(); ?>"></a>
-										</div><!-- thumb -->
-									<?php endif ?>
-
-								<?php else: ?>
+								<?php if ( $count % 2 == 0 ): ?>
 
 									<?php if ( has_post_thumbnail() ): ?>
 										<div class="thumb col-sm-4" <?php em_thumbnail_background( 'full' ); ?>>
@@ -170,6 +151,25 @@ get_header(); ?>
 										<div class="clear"></div>
 										<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
 									</div><!-- desc -->
+
+								<?php else: ?>
+
+									<div class="desc col-sm-4">
+										<h3><?php the_title(); ?></h3>
+										<span><?php echo em_get_excerpt( get_the_content(), '130' ); ?></span>
+										<div class="clear"></div>
+										<a href="<?php echo esc_url( get_permalink( get_the_ID() ) ); ?>" class="button"><?php _e( 'More', 'em' ); ?></a>
+									</div><!-- desc -->
+
+									<?php if ( has_post_thumbnail() ): ?>
+										<div class="thumb col-sm-8" <?php em_thumbnail_background( 'full' ); ?>>
+											<a href="<?php the_permalink(); ?>"></a>
+										</div><!-- thumb -->
+									<?php else: ?>
+										<div class="thumb col-sm-8" style="background-image: url( 'http://via.placeholder.com/720x320' )" >
+											<a href="<?php the_permalink(); ?>"></a>
+										</div><!-- thumb -->
+									<?php endif ?>
 
 								<?php endif ?>
 
