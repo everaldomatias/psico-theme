@@ -29,29 +29,33 @@
 				<div class="col-sm-8 menus">
 					<?php
 						$nav_menu = wp_get_nav_menu_object( 'Navegação' );
-						wp_nav_menu(
-							array(
-								'theme_location' => 'first-footer-menu',
-								'depth'          => 1,
-								'container'      => false,
-								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								'walker'         => new Odin_Bootstrap_Nav_Walker(),
-								'items_wrap'      => '<ul class="col-sm-6"><li class="title"><h4>' . $nav_menu->name . '</h4></li>%3$s</ul>'
-							)
-						);
+						if ( is_object( $nav_menu ) ) {
+							wp_nav_menu(
+								array(
+									'theme_location' => 'first-footer-menu',
+									'depth'          => 1,
+									'container'      => false,
+									'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+									'walker'         => new Odin_Bootstrap_Nav_Walker(),
+									'items_wrap'      => '<ul class="col-sm-6"><li class="title"><h4>' . $nav_menu->name . '</h4></li>%3$s</ul>'
+								)
+							);
+						}
 					?>
 					<?php
 						$nav_menu = wp_get_nav_menu_object( 'Institucional' );
-						wp_nav_menu(
-							array(
-								'theme_location' => 'second-footer-menu',
-								'depth'          => 1,
-								'container'      => 'false',
-								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								'walker'         => new Odin_Bootstrap_Nav_Walker(),
-								'items_wrap'      => '<ul class="col-sm-6"><li class="title"><h4>' . $nav_menu->name . '</h4></li>%3$s</ul>'
-							)
-						);
+						if ( is_object( $nav_menu ) ) {
+							wp_nav_menu(
+								array(
+									'theme_location' => 'second-footer-menu',
+									'depth'          => 1,
+									'container'      => 'false',
+									'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+									'walker'         => new Odin_Bootstrap_Nav_Walker(),
+									'items_wrap'      => '<ul class="col-sm-6"><li class="title"><h4>' . $nav_menu->name . '</h4></li>%3$s</ul>'
+								)
+							);
+						}
 					?>
 				</div><!-- menus -->
 				<div class="col-sm-4 contacts">
