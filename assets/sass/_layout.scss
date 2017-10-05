@@ -42,6 +42,11 @@ body {
         padding-right: 15px !important;
     }
 }
+.container-center {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
 a {
     color: $footer;
     text-decoration: none;
@@ -190,6 +195,72 @@ body {
 
 #content:focus {
     outline: none;
+}
+
+//
+// Contact Form 7
+//
+
+div.wpcf7 {
+    .wpcf7-form {
+        span {
+            &.wpcf7-list-item {
+                display: block;
+                margin-left: 0;
+                max-width: 100%;
+                width: 100%;
+                span {
+                    &.wpcf7-list-item-label {
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
+        label {
+            display: block;
+            .wpcf7-form-control-wrap {
+                input {
+                    border: 0;
+                    border-radius: 20px;
+                    color: #5A5A5A;
+                    display: block;
+                    padding: 10px 20px;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+        .ajax-loader {
+            background-position: center 15px;
+            background-repeat: no-repeat;
+            clear: both;
+            display: block;
+            float: none;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .wpcf7-response-output {
+            text-align: center;
+        }
+        input[type="submit"] {
+            background-color: $footer;
+            border: 0;
+            border-radius: 20px;
+            color: $no-white;
+            display: block;
+            float: none;
+            margin: 0 auto;
+            padding: 10px 20px;
+            text-align: center;
+            width: auto;
+            &:focus {
+                outline: none; 
+            }
+        }
+        .wpcf7-recaptcha {
+            padding-top: 25px !important;
+        }
+    }    
 }
 
 //

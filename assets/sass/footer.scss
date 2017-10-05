@@ -15,6 +15,8 @@ footer#footer {
 				margin-top: 0;
 			}
 			.wpcf7 {
+				margin: 0 auto;
+				max-width: 710px;
 				padding-top: 15px;
 				input,
 				textarea {
@@ -29,6 +31,7 @@ footer#footer {
 						outline: 0;
 					}
 					&[type="submit"] {
+						background-color: $no-white;
 						margin: 0 auto;
 						width: auto;
 					}
