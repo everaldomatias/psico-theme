@@ -68,7 +68,7 @@
 				<div class="clear"></div>
 
 				<?php if ( is_home() ) : ?>
-					<div class="col-sm-4 nopadding side">
+					<div class="col-sm-4 nopadding side hidden">
 						<div class="col-sm-12 nopadding about">
 							<div class="in">
 
@@ -114,7 +114,7 @@
 							</div><!-- in -->
 						</div><!-- online-service -->
 					</div><!-- side -->
-					<div class="col-sm-8 nopadding principal-slider">
+					<div class="col-sm-12 nopadding principal-slider">
 						<?php
 						$args = array(
 							'post_type'			=> 'slider',
