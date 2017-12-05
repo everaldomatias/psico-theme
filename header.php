@@ -131,7 +131,7 @@
 
 						<?php else: ?>
 
-							<div class="each" style="background-image: url( 'http://via.placeholder.com/760' )" ></div><!-- each -->
+							<div class="each" style="background-image: url( 'http://via.placeholder.com/1140x500' )" ></div><!-- each -->
 
 						<?php endif; ?>
 
